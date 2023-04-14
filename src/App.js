@@ -3,7 +3,6 @@ import HeroEpisod from "./components/HeroEpisod";
 import HeroCard from "./components/HeroCard";
 import HomePage from "./components/HomePage";
 import HeroDetails from "./components/HeroDetails";
-import EpisodesDetails from "./components/EpisodesDetails";
 import Layout from "./components/Layout";
 import { Routes, Route } from "react-router-dom";
 
@@ -16,7 +15,6 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="episodes" element={<HeroEpisod />} />
-          <Route path="episodes/:id" element={<EpisodesDetails />} />
           <Route path="heroes" element={<HeroCard />} />
           <Route path="heroes/hero/:id" element={<HeroDetails />} />
         </Route>

@@ -5,7 +5,6 @@ import { nextHandler, prevHandler } from "../helpers/btnPrevNext";
 const HeroEpisod = () => {
   const [page, setPage] = useState(1);
   const { data, loading } = useFetchEpisodes(`episode/?page=${page}`);
-  console.log(data);
 
   return (
     <div className={"episodes-wrapper"}>
@@ -17,7 +16,7 @@ const HeroEpisod = () => {
             return (
               <div className={"item-episod"} key={index}>
                 <div className="number-item">
-                  <p>{`${index + 1}.`}</p>
+                  <p>{`${item.id}.`}</p>
                 </div>
                 <div className="info-item">
                   <p>
